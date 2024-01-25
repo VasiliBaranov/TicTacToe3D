@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F81AAB5D-C1F5-4FF4-B702-C3F68B40C797}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TicTacToe3D</RootNamespace>
+    <AssemblyName>TicTacToe3D</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\Computer players\ComputerPlayer.cs" />
+    <Compile Include="AI\Computer players\ComputerPlayersFactory.cs" />
+    <Compile Include="AI\Computer players\EasyComputerPlayer.cs" />
+    <Compile Include="AI\Computer players\HardComputerPlayer.cs" />
+    <Compile Include="AI\Computer players\NormalComputerPlayer.cs" />
+    <Compile Include="AI\GameAssistant.cs" />
+    <Compile Include="AI\Interfaces\IGameAssistant.cs" />
+    <Compile Include="AI\ValuableCell.cs" />
+    <Compile Include="GameInfoSerialization\GameInfoSerializer.cs" />
+    <Compile Include="GameInfoSerialization\GameInfoSerializerFactory.cs" />
+    <Compile Include="GameInfoSerialization\Interfaces\IGameInfoSerializer.cs" />
+    <Compile Include="GameStages\BaseWorkflowStage\BaseWorkflowStep.cs" />
+    <Compile Include="GameStages\GameLoadingStage\Event\GameContinuingEventArgs.cs" />
+    <Compile Include="GameStages\GameLoadingStage\Interfaces\IGameLoader.cs" />
+    <Compile Include="GameStages\GameLoadingStage\GameLoader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameStages\GameLoadingStage\GameLoader.Designer.cs">
+      <DependentUpon>GameLoader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameStages\GameLoadingStage\GameLoadingDirector.cs" />
+    <Compile Include="GameStages\GameLoadingStage\GameLoadingStageFactory.cs" />
+    <Compile Include="GameStages\MainGameMenuStage\Interfaces\IMainMenu.cs" />
+    <Compile Include="GameStages\MainGameMenuStage\MainGameMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameStages\MainGameMenuStage\MainGameMenu.Designer.cs">
+      <DependentUpon>MainGameMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameStages\MainGameMenuStage\MainGameMenuDirector.cs" />
+    <Compile Include="GameStages\MainGameMenuStage\MainGameMenuStageFactory.cs" />
+    <Compile Include="GameStages\GameStatisticsStage\GameStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameStages\GameStatisticsStage\GameStatistics.Designer.cs">
+      <DependentUpon>GameStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameStages\GameStatisticsStage\Interfaces\IGameStatistics.cs" />
+    <Compile Include="GameStages\GameStatisticsStage\Interfaces\IPlayerStatistics.cs" />
+    <Compile Include="GameStages\GameStatisticsStage\PlayerStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameStages\GameStatisticsStage\PlayerStatistics.Designer.cs">
+      <DependentUpon>PlayerStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameStages\GameStatisticsStage\GameStatisticsStageDirector.cs" />
+    <Compile Include="GameStages\GameStatisticsStage\GameStatisticsStageFactory.cs" />
+    <Compile Include="GameStages\GameBuildingStage\Events\PlayerInfoChangedEventArgs.cs" />
+    <Compile Include="GameStages\GameBuildingStage\GameBuildingDirector.cs" />
+    <Compile Include="GameStages\GameBuildingStage\GameInformationCollector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameStages\GameBuildingStage\GameInformationCollector.designer.cs">
+      <DependentUpon>GameInformationCollector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameStages\GameBuildingStage\Interfaces\IGameInformationCollector.cs" />
+    <Compile Include="GameStages\GameBuildingStage\Interfaces\IInfoCollector.cs" />
+    <Compile Include="GameStages\GameBuildingStage\Interfaces\IPLayerInfoCollector.cs" />
+    <Compile Include="GameStages\GameBuildingStage\Interfaces\IPlayerInfoListCollector.cs" />
+    <Compile Include="GameStages\GameBuildingStage\PlayerInfoListController\Interfaces\IPlayerInfoCollectionController.cs" />
+    <Compile Include="GameStages\GameBuildingStage\PlayerInfoListController\Interfaces\IRestrictionApplier.cs" />
+    <Compile Include="GameStages\GameBuildingStage\PlayerInfoListController\PlayerInfoListController.cs" />
+    <Compile Include="GameStages\GameBuildingStage\PlayerInfoListController\PlayerInfoListControllerFactory.cs" />
+    <Compile Include="GameStages\GameBuildingStage\PlayerInfoListController\RestrictionAppliers\NameRestrictionApplier.cs" />
+    <Compile Include="GameStages\GameBuildingStage\PlayerInfoListController\RestrictionAppliers\PlayerTypeAndDifficultyRestrictionApplier.cs" />
+    <Compile Include="GameStages\GameBuildingStage\PlayerInfoListController\RestrictionAppliers\RestrictionApplierRemovingEqualProperties.cs" />
+    <Compile Include="GameStages\GameBuildingStage\PlayerInfoListController\RestrictionAppliers\SideRestrictionApplier.cs" />
+    <Compile Include="GameStages\GameBuildingStage\PlayerInfoListCollector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameStages\GameBuildingStage\PlayerInfoListCollector.designer.cs">
+      <DependentUpon>PlayerInfoListCollector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameStages\GameBuildingStage\PlayerInfoPropertyName.cs" />
+    <Compile Include="GameStages\GameBuildingStage\PlayerInformationCollector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameStages\GameBuildingStage\PlayerInformationCollector.Designer.cs">
+      <DependentUpon>PlayerInformationCollector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameInfo\Exceptions\GameFieldDoesntContainCellException.cs" />
+    <Compile Include="GameInfo\GameHistoryEnumerator.cs" />
+    <Compile Include="GameInfo\Turn.cs" />
+    <Compile Include="GameServer\Events\TurnMadeEventArgs.cs" />
+    <Compile Include="GameServer\ExtendedGameInfo.cs" />
+    <Compile Include="GameServer\GameMasterFactory.cs" />
+    <Compile Include="GameInfo\GameFieldEnumerator.cs" />
+    <Compile Include="GameInfo\GameFieldParameters.cs" />
+    <Compile Include="GameInfo\GameHistory.cs" />
+    <Compile Include="GameInfo\GameInformation.cs" />
+    <Compile Include="GameInfo\GameMasterInformation.cs" />
+    <Compile Include="GameInfo\GameStatus.cs" />
+    <Compile Include="GameInfo\GameType.cs" />
+    <Compile Include="GameInfo\Interfaces\IGameHistory.cs" />
+    <Compile Include="GameInfo\PlayerDifficulty.cs" />
+    <Compile Include="GameInfo\PlayerInformation.cs" />
+    <Compile Include="GameInfo\PlayerType.cs" />
+    <Compile Include="GameServer\GameMaster.cs" />
+    <Compile Include="GameServer\Events\GameEndedEventArgs.cs" />
+    <Compile Include="GameServer\GameMasterSteps\CyclicEnumerator.cs" />
+    <Compile Include="GameStages\GameStage\GameStageDirector.cs" />
+    <Compile Include="GameStages\GameStage\GameStageFactory.cs" />
+    <Compile Include="GameServer\Events\GMStepOperationCompletedEventArgs.cs" />
+    <Compile Include="GameServer\GameMasterSteps\GameMasterStep.cs" />
+    <Compile Include="GameServer\GameMasterSteps\PreparationStep.cs" />
+    <Compile Include="GameServer\GameMasterSteps\TerminationStep.cs" />
+    <Compile Include="GameServer\GameMasterSteps\TurnStep.cs" />
+    <Compile Include="GameServer\GMStepType.cs" />
+    <Compile Include="GameServer\GameMasterSteps\NotTerminatingGameMasterStep.cs" />
+    <Compile Include="GameServer\HistoryTracker.cs" />
+    <Compile Include="GameServer\Interfaces\IGameMasterStep.cs" />
+    <Compile Include="GameServer\Interfaces\IGameObserver.cs" />
+    <Compile Include="GameServer\Interfaces\IParticipant.cs" />
+    <Compile Include="GameInfo\Side.cs" />
+    <Compile Include="GeneralWorkflow\Events\OperationCompletedEventArgs.cs" />
+    <Compile Include="GeneralWorkflow\Interfaces\IWorkflowSupervisor.cs" />
+    <Compile Include="GeneralWorkflow\Interfaces\IWorkflowStep.cs" />
+    <Compile Include="GeneralWorkflow\WorkflowSupervisor.cs" />
+    <Compile Include="GeneralWorkflow\WorkflowSupervisorFactory.cs" />
+    <Compile Include="GraphicsAdapters\AdvancedGraphics\AdvancedGraphicsAdapter.cs" />
+    <Compile Include="GraphicsAdapters\AdvancedGraphics\FigureO.cs" />
+    <Compile Include="GraphicsAdapters\AdvancedGraphics\FigureX.cs" />
+    <Compile Include="GraphicsAdapters\AdvancedGraphics\GameSpace.cs" />
+    <Compile Include="GraphicsAdapters\AdvancedGraphics\GraphicalObjectsFactory.cs" />
+    <Compile Include="GraphicsAdapters\BaseGraphicsAdapter.cs" />
+    <Compile Include="GraphicsAdapters\IGraphicsAdapter.cs" />
+    <Compile Include="GraphicsAdapters\SimpleGraphics\FigureO.cs" />
+    <Compile Include="GraphicsAdapters\SimpleGraphics\FigureX.cs" />
+    <Compile Include="GraphicsAdapters\SimpleGraphics\GameSpace.cs" />
+    <Compile Include="GraphicsAdapters\SimpleGraphics\GraphicalObjectsFactory.cs" />
+    <Compile Include="GraphicsAdapters\SimpleGraphics\SimpleGraphicsAdapter.cs" />
+    <Compile Include="SimpleGraphicsFramework\GraphicalEngine.cs" />
+    <Compile Include="HumanParticipants\HumanGameObserver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HumanParticipants\HumanGameObserver.Designer.cs">
+      <DependentUpon>HumanGameObserver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HumanParticipants\HumanParticipant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HumanParticipants\HumanParticipant.Designer.cs">
+      <DependentUpon>HumanParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleGraphicsFramework\GraphicalObject.cs" />
+    <Compile Include="SimpleGraphicsFramework\IGraphicalEngine.cs" />
+    <Compile Include="SimpleGraphicsFramework\IGraphicalObject.cs" />
+    <Compile Include="HumanParticipants\HumanPlayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HumanParticipants\HumanPlayer.Designer.cs">
+      <DependentUpon>HumanPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HumanParticipants\Interfaces\IHumanGameObserver.cs" />
+    <Compile Include="HumanParticipants\Interfaces\IHumanParticipant.cs" />
+    <Compile Include="HumanParticipants\Interfaces\IHumanPlayer.cs" />
+    <Compile Include="GameInfo\Cell.cs" />
+    <Compile Include="GameInfo\CellState.cs" />
+    <Compile Include="GameInfo\GameField.cs" />
+    <Compile Include="GameInfo\GameRules.cs" />
+    <Compile Include="GameInfo\Interfaces\IGameField.cs" />
+    <Compile Include="GameServer\Interfaces\IGameMaster.cs" />
+    <Compile Include="GameServer\Interfaces\IPlayer.cs" />
+    <Compile Include="Mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainform.Designer.cs">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameStages\GameBuildingStage\GameBuildingStageFactory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GameStages\GameLoadingStage\GameLoader.resx">
+      <DependentUpon>GameLoader.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameStages\MainGameMenuStage\MainGameMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainGameMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameStages\GameStatisticsStage\GameStatistics.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GameStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameStages\GameStatisticsStage\PlayerStatistics.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PlayerStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameStages\GameBuildingStage\GameInformationCollector.resx">
+      <DependentUpon>GameInformationCollector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameStages\GameBuildingStage\PlayerInfoListCollector.resx">
+      <DependentUpon>PlayerInfoListCollector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameStages\GameBuildingStage\PlayerInformationCollector.resx">
+      <DependentUpon>PlayerInformationCollector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumanParticipants\HumanGameObserver.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HumanGameObserver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumanParticipants\HumanParticipant.resx">
+      <DependentUpon>HumanParticipant.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumanParticipants\HumanPlayer.resx">
+      <DependentUpon>HumanPlayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainform.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="ComputerPlayerParametersSchema.xsd">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="ComputerPlayerParametersSchema.xsx">
+      <DependentUpon>ComputerPlayerParametersSchema.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ComputerPlayerParameters.xml" />
+    <Content Include="GraphicsAdapters\AdvancedGraphics\Images\FigureO.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GraphicsAdapters\AdvancedGraphics\Images\FigureX.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GraphicsFramework\GraphicsFramework.csproj">
+      <Project>{9C0AB23B-FCDB-4AA3-82E5-213C811F0060}</Project>
+      <Name>GraphicsFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

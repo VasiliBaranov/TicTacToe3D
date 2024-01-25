@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C0AB23B-FCDB-4AA3-82E5-213C811F0060}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GraphicsFramework</RootNamespace>
+    <AssemblyName>GraphicsFramework</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Iridium, Version=2008.8.16.470, Culture=neutral, PublicKeyToken=c061a3ec32cc0c6f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\MathNet.Iridium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LinearAlgebra\AffinePoint.cs" />
+    <Compile Include="LinearAlgebra\Angle.cs" />
+    <Compile Include="LinearAlgebra\Axis.cs" />
+    <Compile Include="GraphicalEngine.cs" />
+    <Compile Include="IGraphicalEngine.cs" />
+    <Compile Include="LinearAlgebra\Direction.cs" />
+    <Compile Include="World\Camera.cs" />
+    <Compile Include="LinearAlgebra\Matrix.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LinearAlgebra\Vector.cs" />
+    <Compile Include="World\GraphicalObject.cs" />
+    <Compile Include="World\WorldObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseObjects\PlaneObject.cs" />
+    <Compile Include="BaseObjects\Rectangle.cs" />
+    <Compile Include="Core\EnumerableExtension.cs" />
+    <Compile Include="Core\ItemEventArgs.cs" />
+    <Compile Include="Core\ListExtension.cs" />
+    <Compile Include="Edges\PlaneEdge.cs" />
+    <Compile Include="GraphicsPipeline\ClippingStep.cs" />
+    <Compile Include="Edges\GenericEdge.cs" />
+    <Compile Include="Edges\EdgeBuilder.cs" />
+    <Compile Include="Edges\IEdgeBuilder.cs" />
+    <Compile Include="GraphicsPipeline\IVisualizationParametersBuilder.cs" />
+    <Compile Include="GraphicsPipeline\TextureVisualizationParameters.cs" />
+    <Compile Include="GraphicsPipeline\TextureVisualizingStep.cs" />
+    <Compile Include="Edges\Edge.cs" />
+    <Compile Include="GraphicsPipeline\GraphicsPipeline.cs" />
+    <Compile Include="Edges\IEdgeClipper.cs" />
+    <Compile Include="GraphicsPipeline\IGraphicsPipeline.cs" />
+    <Compile Include="Edges\LiangBarskyEdgeClipper.cs" />
+    <Compile Include="GraphicsPipeline\PerspectiveDivisionStep.cs" />
+    <Compile Include="GraphicsPipeline\VertexColouringStep.cs" />
+    <Compile Include="GraphicsPipeline\MonochromeVisualizingStep.cs" />
+    <Compile Include="GraphicsPipeline\ProjectionStep.cs" />
+    <Compile Include="GraphicsPipeline\GraphicsFillingStep.cs" />
+    <Compile Include="GraphicsPipeline\IGraphicsPipelineStep.cs" />
+    <Compile Include="GraphicsPipeline\ModellingViewStep.cs" />
+    <Compile Include="GraphicsPipeline\ViewPortTransformStep.cs" />
+    <Compile Include="GraphicsPipeline\VisualizationParametersBuilder.cs" />
+    <Compile Include="LinearAlgebra\LinearAlgebraExtensions.cs" />
+    <Compile Include="LinearAlgebra\Vector2D.cs" />
+    <Compile Include="LinearAlgebra\Vector3D.cs" />
+    <Compile Include="LinearAlgebra\Vector4D.cs" />
+    <Compile Include="World\CameraParameters.cs" />
+    <Compile Include="World\ICamera.cs" />
+    <Compile Include="World\IGraphicalObject.cs" />
+    <Compile Include="World\IVisibleWorld.cs" />
+    <Compile Include="World\IWorld.cs" />
+    <Compile Include="World\IWorldObject.cs" />
+    <Compile Include="World\LightSource.cs" />
+    <Compile Include="World\Plane.cs" />
+    <Compile Include="World\PlaneVertex.cs" />
+    <Compile Include="World\Texture.cs" />
+    <Compile Include="World\VisibleWorld.cs" />
+    <Compile Include="World\World.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

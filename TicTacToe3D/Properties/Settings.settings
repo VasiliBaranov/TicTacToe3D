@@ -1,0 +1,57 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TicTacToe3D.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DrawingColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">DarkBlue</Value>
+    </Setting>
+    <Setting Name="DefaultCellSize" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">84</Value>
+    </Setting>
+    <Setting Name="DefaultCameraPositionAlongX" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DefaultCameraPositionAlongY" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DefaultCameraPositionAlongZ" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">180</Value>
+    </Setting>
+    <Setting Name="DistanceToTheNearPlaneOfCamera" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="DistanceToTheFarPlaneOfCamera" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">4000</Value>
+    </Setting>
+    <Setting Name="DefaultCameraRotationAngleAlongX" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-0.7854</Value>
+    </Setting>
+    <Setting Name="DefaultCameraRotationAngleAlongY" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-0.6283</Value>
+    </Setting>
+    <Setting Name="DefaultCameraRotationAngleAlongZ" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-1.57</Value>
+    </Setting>
+    <Setting Name="CameraRotationAnglePerTimerInterval" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.157</Value>
+    </Setting>
+    <Setting Name="CameraTransformationIntervalForTimer" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="CameraDisplacementAlongZPerTimerInterval" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="CameraDisplacementAlongXPerTimerInterval" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CameraDisplacementAlongYPerTimerInterval" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ReplayExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rep</Value>
+    </Setting>
+    <Setting Name="UnfinishedGameExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">gam</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

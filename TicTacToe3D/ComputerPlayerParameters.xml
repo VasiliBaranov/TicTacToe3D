@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<computerPlayerParameters>
+
+  <cellValues>
+
+    <!--
+    <cellValue>
+
+      <currentPlayerSide>
+        StartingSide
+      </currentPlayerSide>
+
+      <numberOfEmtyElementsInLine>
+        3
+      </numberOfEmtyElementsInLine>
+
+      <numberOfCurrentSideCellsInLine>
+        0
+      </numberOfCurrentSideCellsInLine>
+
+      <value>
+        1
+      </value>
+
+    </cellValue>
+    -->
+
+    <!--Cell values with more precise description will be used-->
+
+    <cellValue 
+      currentPlayerSide="StartingSide"
+      numberOfEmtyElementsInLine="1"
+      numberOfCurrentSideCellsInLine="2"
+      notStartingPlayerWillHaveATurnAfterStartingPlayerWins="true">
+      300
+    </cellValue>
+
+    <cellValue 
+      currentPlayerSide="StartingSide"
+      numberOfEmtyElementsInLine="1"
+      numberOfCurrentSideCellsInLine="2"
+      notStartingPlayerWillHaveATurnAfterStartingPlayerWins="false">
+      500
+    </cellValue>
+
+    <cellValue 
+      currentPlayerSide="NotStartingSide"
+      numberOfEmtyElementsInLine="1"
+      numberOfCurrentSideCellsInLine="2">
+      500
+    </cellValue>
+
+    <cellValue 
+      currentPlayerSide="StartingSide" 
+      numberOfEmtyElementsInLine="1"
+      numberOfCurrentSideCellsInLine="0">
+      500
+    </cellValue>
+
+    <cellValue 
+      currentPlayerSide="NotStartingSide" 
+      numberOfEmtyElementsInLine="1"
+      numberOfCurrentSideCellsInLine="0"
+      notStartingPlayerWillHaveATurnAfterStartingPlayerWins="true">
+      300
+    </cellValue>
+
+    <cellValue 
+      currentPlayerSide="NotStartingSide" 
+      numberOfEmtyElementsInLine="1"
+      numberOfCurrentSideCellsInLine="0"
+      notStartingPlayerWillHaveATurnAfterStartingPlayerWins="false">
+      400
+    </cellValue>
+
+    <cellValue 
+      numberOfEmtyElementsInLine="2"
+      numberOfCurrentSideCellsInLine="1">
+      5
+    </cellValue>
+
+    <cellValue 
+      numberOfEmtyElementsInLine="3"
+      numberOfCurrentSideCellsInLine="0">
+      3
+    </cellValue>
+
+    <cellValue
+      numberOfEmtyElementsInLine="2"
+      numberOfCurrentSideCellsInLine="0">
+      1
+    </cellValue>
+
+    <cellValue>
+      0
+    </cellValue>
+
+  </cellValues>
+
+</computerPlayerParameters>
+

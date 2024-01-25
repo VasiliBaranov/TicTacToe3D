@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{564E6337-8303-4CAD-BAD2-8D168A169E9B}"
+	ProjectSection(SolutionItems) = preProject
+		External\MathNet.Iridium-2008.8.16.470.chm = External\MathNet.Iridium-2008.8.16.470.chm
+		External\MathNet.Iridium.dll = External\MathNet.Iridium.dll
+		External\MathNet.Iridium.pdb = External\MathNet.Iridium.pdb
+		External\MathNet.Iridium.xml = External\MathNet.Iridium.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe3D", "TicTacToe3D\TicTacToe3D.csproj", "{F81AAB5D-C1F5-4FF4-B702-C3F68B40C797}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicsFramework", "GraphicsFramework\GraphicsFramework.csproj", "{9C0AB23B-FCDB-4AA3-82E5-213C811F0060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{6977EE3C-5919-44AF-B686-11CAE1856978}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicsFrameworkTest", "GraphicsFrameworkTest\GraphicsFrameworkTest.csproj", "{E2594612-CA83-4142-A170-7D24D29A0D8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F81AAB5D-C1F5-4FF4-B702-C3F68B40C797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F81AAB5D-C1F5-4FF4-B702-C3F68B40C797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F81AAB5D-C1F5-4FF4-B702-C3F68B40C797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F81AAB5D-C1F5-4FF4-B702-C3F68B40C797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0AB23B-FCDB-4AA3-82E5-213C811F0060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0AB23B-FCDB-4AA3-82E5-213C811F0060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0AB23B-FCDB-4AA3-82E5-213C811F0060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0AB23B-FCDB-4AA3-82E5-213C811F0060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6977EE3C-5919-44AF-B686-11CAE1856978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6977EE3C-5919-44AF-B686-11CAE1856978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6977EE3C-5919-44AF-B686-11CAE1856978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6977EE3C-5919-44AF-B686-11CAE1856978}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2594612-CA83-4142-A170-7D24D29A0D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2594612-CA83-4142-A170-7D24D29A0D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2594612-CA83-4142-A170-7D24D29A0D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2594612-CA83-4142-A170-7D24D29A0D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
