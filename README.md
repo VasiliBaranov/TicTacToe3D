@@ -8,6 +8,8 @@ The user interface is not stellar, but shall be more or less straightforward to 
 
 One caveat in the rules: the second player can make one more turn after the first player wins.
 
+Known problems: trying to save or load the game leads to an unhandled exception.
+
 # Impression
 
 It looks like this:
